@@ -9,7 +9,7 @@ import time
 options = webdriver.ChromeOptions()
 
 # Verwende WebDriverManager zum Installieren von ChromeDriver
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
 
 try:
     # Öffne die Webseite

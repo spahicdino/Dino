@@ -25,7 +25,6 @@ jobs:
         sudo apt-get install -y wget unzip
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install webdriver-manager
 
     - name: Start Xvfb and run tests
       run: |
