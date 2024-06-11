@@ -2,14 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import undetected_chromedriver as uc
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # Webdriver-Optionen festlegen
 options = webdriver.ChromeOptions()
 
-# Undetected ChromeDriver verwenden
-driver = uc.Chrome(options=options)
+# Verwende WebDriverManager zum Installieren von ChromeDriver
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 try:
     # Öffne die Webseite
