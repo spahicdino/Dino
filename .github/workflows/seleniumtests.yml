@@ -27,7 +27,7 @@ jobs:
         sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get install -f
         CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
         MAJOR_VERSION=$(echo $CHROME_VERSION | cut -d '.' -f 1)
-        LATEST_DRIVER=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$MAJOR_VERSION)
+        LATEST_DRIVER=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${MAJOR_VERSION})
         wget https://chromedriver.storage.googleapis.com/${LATEST_DRIVER}/chromedriver_linux64.zip
         unzip chromedriver_linux64.zip
         sudo mv chromedriver /usr/local/bin/chromedriver
