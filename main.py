@@ -7,9 +7,10 @@ import time
 
 # Webdriver-Optionen festlegen
 options = webdriver.ChromeOptions()
+options.binary_location = ChromeDriverManager().install()
 
 # Verwende WebDriverManager zum Installieren von ChromeDriver
-driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
+driver = webdriver.Chrome(options=options)
 
 try:
     # Öffne die Webseite
