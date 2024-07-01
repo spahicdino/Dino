@@ -22,8 +22,8 @@ driver = webdriver.Chrome(service=service, options=options)
 try:
     # Öffne die Webseite
     print("Öffne die Webseite...")
-    driver.get("https://www.ligaportal.at/ooe/landesliga/landesliga-west/spieler-der-runde/105801-landesliga-west-waehle-den-beliebtesten-tipgame-com-spieler-der-saison-23-24")
-
+    driver.get("https://www.ligaportal.at/ooe/2-klasse/2-klasse-mitte-west/spieler-der-runde/105816-2-klasse-mitte-west-waehle-den-beliebtesten-tipgame-com-spieler-der-saison-23-24")
+    
     # Warte auf den iFrame des Cookie-Banners und wechsle hinein (optional)
     print("Warte auf den iFrame des Cookie-Banners...")
     try:
@@ -60,7 +60,7 @@ try:
     print("Überprüfe, ob das Dropdown-Element vorhanden ist...")
     try:
         collapse_button = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "//a[@data-target='#collapse-64']"))
+            EC.element_to_be_clickable((By.XPATH, "//a[@data-target='#collapse-92']"))
         )
         print("Element gefunden, scrolle und klicke darauf...")
         driver.execute_script("arguments[0].scrollIntoView(true);", collapse_button)
@@ -76,7 +76,7 @@ try:
     # Führe JavaScript aus, um den Radiobutton auszuwählen
     print("Wähle den Radiobutton per JavaScript aus...")
     script = """
-    document.querySelector('input[id="voteItem-341568"]').checked = true;
+    document.querySelector('input[id="voteItem-347349"]').checked = true;
     """
     driver.execute_script(script)
 
