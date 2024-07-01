@@ -22,13 +22,13 @@ driver = webdriver.Chrome(service=service, options=options)
 try:
     # Öffne die Webseite
     print("Öffne die Webseite...")
-    driver.get("https://www.ligaportal.at/ooe/2-klasse/2-klasse-mitte-west/spieler-der-runde/105816-2-klasse-mitte-west-waehle-den-beliebtesten-tipgame-com-spieler-der-saison-23-24")
+    driver.get("https://www.ligaportal.at/ooe/2-klasse/2-klasse-mitte-west/spieler-der-runde/105816-2-klasse-mitte-west-waehle-den-beliebtesten-tipgame-com-spieler-der-saison")
     
-    # Warte auf den iFrame des Cookie-Banners und wechsle hinein
-    print("Warte auf den iFrame des Cookie-Banners...")
+    # Warte auf den iframe des Cookie-Banners und wechsle hinein
+    print("Warte auf den iframe des Cookie-Banners...")
     try:
         cookie_iframe = WebDriverWait(driver, 10).until(
-            EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, "iframe[src*='privacymanager.io']"))
+            EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR, "iframe[src='privacymanager.io']"))
         )
         # Akzeptiere die Cookies
         print("Akzeptiere die Cookies...")
