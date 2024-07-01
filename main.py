@@ -24,7 +24,7 @@ try:
     print("Öffne die Webseite...")
     driver.get("https://www.ligaportal.at/ooe/2-klasse/2-klasse-mitte-west/spieler-der-runde/105816-2-klasse-mitte-west-waehle-den-beliebtesten-tipgame-com-spieler-der-saison-23-24")
     
-    # Warte auf den iFrame des Cookie-Banners und wechsle hinein (optional)
+    # Warte auf den iFrame des Cookie-Banners und wechsle hinein
     print("Warte auf den iFrame des Cookie-Banners...")
     try:
         cookie_iframe = WebDriverWait(driver, 10).until(
